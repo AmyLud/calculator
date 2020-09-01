@@ -1,3 +1,11 @@
+import { createGlobalStyle } from "styled-components";
+
+export const GlobalStyle = createGlobalStyle`
+  body {
+    color: ${(props) => props.theme.color.neutral.darkest};
+  }
+`;
+
 export default {
   spacing: {
     xxsmall: "0.25rem",
