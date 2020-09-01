@@ -1,10 +1,14 @@
 import React from "react";
+import { ThemeProvider } from "styled-components";
+import theme from "./theme";
 import { MortgageCalculator } from "./features";
 
 function App() {
   return (
     <div className="App">
-      <MortgageCalculator />
+      <ThemeProvider theme={theme}>
+        <MortgageCalculator />
+      </ThemeProvider>
     </div>
   );
 }
