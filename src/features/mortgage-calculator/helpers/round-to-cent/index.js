@@ -1,3 +1,1 @@
-export default (value) => {
-  return Math.round(value * 100) / 100;
-};
+const roundCent = (dollarVal) => Math.round(dollarVal * 100) / 100;
