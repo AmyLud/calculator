@@ -15,6 +15,7 @@ export default (
   let payments = [];
   let totalPaid = 0,
     totalInterest = 0,
+    totalPrincipal = 0,
     principalPayment = 0;
   const addPayment = (balance, remainingPeriods) => {
     let interestPayment = roundCent(principal * rate);
@@ -35,6 +36,7 @@ export default (
     }
     const periodPayment = roundCent(interestPayment + principalPayment);
     totalInterest += interestPayment;
+    totalPrincipal += principalPayment;
     totalPaid += periodPayment;
 
     payments.push({
@@ -44,6 +46,7 @@ export default (
       periodPayment,
       totalPaid: roundCent(totalPaid),
       totalInterest: roundCent(totalInterest),
+      totalPrincipal: roundCent(totalPrincipal),
       balance: principal,
     });
 
