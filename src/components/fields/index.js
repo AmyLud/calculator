@@ -1,6 +1,8 @@
 import React from "react";
 import { Field, FieldInput, AddOn, Error } from "./styles";
 
+// had some of these from another project. Didn't want to use a library, but also... kinda a time crunch. So, this folder only needed small edits
+
 export const DollarField = ({ name, text, value, onChange, errorText }) => (
   <Field addOn left>
     <label htmlFor={name}>{text}</label>
