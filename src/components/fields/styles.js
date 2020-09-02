@@ -1,16 +1,15 @@
 import styled, { css } from "styled-components";
 
 export const Field = styled.div`
-  width: ${(props) => (props.half ? "50%" : "100%")};
-  margin: ${({ theme }) => theme.spacing.medium};
+  width: 100%;
   text-align: left;
+  margin-bottom: ${({ theme }) => theme.spacing.medium};
   label {
     display: block;
     margin-bottom: ${({ theme }) => theme.spacing.xxsmall};
   }
   input,
   select {
-    height: ${({ theme }) => theme.spacing.xlarge};
     margin: 0;
     padding: ${({ theme }) => theme.spacing.xsmall};
     width: 100%;

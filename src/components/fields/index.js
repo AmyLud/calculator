@@ -2,7 +2,7 @@ import React from "react";
 import { Field, FieldInput, AddOn, Error } from "./styles";
 
 export const DollarField = ({ name, text, value, onChange, errorText }) => (
-  <Field half addOn left>
+  <Field addOn left>
     <label htmlFor={name}>{text}</label>
     <FieldInput>
       <AddOn> $ </AddOn>
@@ -19,7 +19,7 @@ export const DollarField = ({ name, text, value, onChange, errorText }) => (
 );
 
 export const PercentField = ({ name, text, value, onChange, errorText }) => (
-  <Field half addOn right>
+  <Field addOn right>
     <label htmlFor={name}>{text}</label>
     <FieldInput>
       <input
@@ -39,9 +39,9 @@ export const SelectField = ({ name, text, value, onChange, options = [] }) => (
   <Field half>
     <label htmlFor={name}>{text}</label>
     <FieldInput>
-      <select name={name} id={name}>
-        {options.map(({ value, text }) => (
-          <option key={text} value={value}>
+      <select name={name} id={name} onChange={onChange} value={value}>
+        {options.map(({ value, text, selected }) => (
+          <option key={text} value={value} selected={selected}>
             {text}
           </option>
         ))}
