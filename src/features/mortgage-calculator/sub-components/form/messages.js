@@ -1,0 +1,15 @@
+export default {
+  payPlan: "Payment Plan",
+  prePayPlan: "Prepayment Plan",
+  mtgAmountRq: "Mortgage Amount Required",
+  interestRateRq: "Interest Rate Required",
+  prepaymentAmountRq: "Prepayment Amount",
+  mtgAmount: "Mortgage Amount",
+  interestRate: "Interest Rate",
+  amortization: "Amortization Period",
+  paymentFreq: "Payment Frequency",
+  term: "Term",
+  prepaymentAmount: "Prepayment Amount",
+  prepaymentFrequency: "Prepayment Frequency",
+  calculate: "Calculate!",
+};
