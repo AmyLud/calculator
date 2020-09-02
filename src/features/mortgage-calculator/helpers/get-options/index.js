@@ -47,3 +47,19 @@ export const payFrequencies = [
     text: messages.week,
   },
 ];
+
+export const prePayFrequencies = [
+  {
+    value: "once",
+    text: messages.once,
+    selected: "selected",
+  },
+  {
+    value: "each",
+    text: messages.each,
+  },
+  {
+    value: "yearly",
+    text: messages.yearly,
+  },
+];

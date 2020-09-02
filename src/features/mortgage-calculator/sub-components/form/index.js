@@ -24,6 +24,9 @@ const initialValues = {
   paymentInterval: "once", // 'yearly', 'each'
 };
 
+const anyErrors = (errors) =>
+  Object.values(errors).filter((a) => a).length !== 0;
+
 export default ({ onSubmitForm }) => {
   const { values, errors, submitting, handleChange, handleSubmit } = useForm({
     initialValues,
@@ -82,13 +85,14 @@ export default ({ onSubmitForm }) => {
         />
         <SelectField
           text={messages.prepaymentFrequency}
-          name="term"
+          name="paymentInterval"
           options={prePayFrequencies}
-          value={values.term}
+          value={values.paymentInterval}
           onChange={handleChange}
         />
       </div>
-      <Button type="submit" disabled={submitting}>
+
+      <Button type="submit" disabled={submitting || anyErrors(errors)}>
         {messages.calculate}
       </Button>
     </Form>

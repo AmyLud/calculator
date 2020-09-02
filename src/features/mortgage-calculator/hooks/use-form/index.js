@@ -3,7 +3,6 @@ import { useState, useEffect, useRef } from "react";
 const useForm = ({ initialValues, onSubmit }) => {
   const [values, setValues] = useState(initialValues || {});
   const [errors, setErrors] = useState({});
-  const [touched, setTouched] = useState({});
   const [submitting, setSubmitting] = useState(false);
 
   const formRendered = useRef(true);
@@ -12,7 +11,6 @@ const useForm = ({ initialValues, onSubmit }) => {
     if (!formRendered.current) {
       setValues(initialValues);
       setErrors({});
-      setTouched({});
       setSubmitting(false);
     }
     formRendered.current = false;
@@ -44,7 +42,6 @@ const useForm = ({ initialValues, onSubmit }) => {
   return {
     values,
     errors,
-    touched,
     handleChange,
     submitting,
     handleSubmit,
